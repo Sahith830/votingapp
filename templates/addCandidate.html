@@ -1,0 +1,40 @@
+{% extends 'Base.html' %}
+{% block content %}
+<body class="addcandidate">
+    <div class="header">
+        <div class="logo">
+            V O T E
+        </div>
+        <ul>
+            
+            {% if user.is_authenticated %}
+            <a href='logout'><li>Logout</li></a>
+            <a href="profile"><li>Profile</li></a>
+            <a href="adminhome"><li>Home</li> </a>
+            {% else %}
+            <a href='adminhome'><li>Home</li></a>
+            <a href='register'><li>Register</li></a>
+            <a href='login'><li>Login</li></a>
+            {% endif %}
+        </ul>
+    </div>
+    <div class="addcandidate-form">
+        <h1>Adding Candidate</h1>
+        <form method="POST" action="addcandidate" enctype="multipart/form-data">
+            {% csrf_token %}
+            <br>
+            <input class = "addcandidate-input" type="text" name="name" placeholder="Name">
+            <br>
+            <input class = "addcandidate-input" type="text" name="party" placeholder="Party">
+            <br>
+            <input class = "addcandidate-input" type="text" name="symbol" placeholder="Symbol">
+            <br>
+            <input class = "addcandidate-img" type="file" name="imagefile" value="add Image">
+            <br>
+            <input class="addcandidate-button" type="submit">
+        </form>
+    </div>
+
+</body>
+
+{% endblock %}

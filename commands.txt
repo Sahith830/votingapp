@@ -1,0 +1,5 @@
+django-admin startproject votingapp
+cd votingapp
+python manage.py startapp votingMVT
+python manage.py runserver
+python manage.py makemigrations

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V O T E - {{request.get_full_path_info}}</title>
+    <link rel="stylesheet" href="./../static/styling.css">
+</head>
+{% block content %}
+<body class="base">
+    <div class="header">
+        <div class="logo">
+            V O T E
+        </div>
+        <ul>
+            
+            {% if user.is_authenticated %}
+            <a href='logout'><li>Logout</li></a>
+            <a href="profile"><li>Profile</li></a>
+            {% else %}
+            <a href='/'><li>Home</li></a>
+            <a href='register'><li>Register</li></a>
+            <a href='login'><li>Login</li></a>
+            {% endif %}
+        </ul>
+    </div>
+    
+</body>
+{% endblock %}
+</html>

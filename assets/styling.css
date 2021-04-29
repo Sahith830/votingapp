@@ -1,0 +1,326 @@
+
+@font-face {
+    font-family: 'broadstreetw00-textregular';
+    src: url('fonts/broadstreet_w00_text-webfont.woff2') format('woff2'),
+         url('fonts/broadstreet_w00_text-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.base{
+    background : url('img/vote_online.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.header{
+    height:20%;
+    width: 100%;
+    background: rgba(255, 166, 0, 0.822);
+    border-radius: 10px;
+    padding: 2px;
+    color:white;
+}
+.logo{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'broadstreetw00-textregular';
+}
+.header li{
+    display: inline;
+    background:lightskyblue;
+    border-radius: 2px;
+    color:whitesmoke;
+    font-weight: bold;
+    float: right;
+    padding: 20px;
+}
+ul{
+    list-style-type: none;
+}
+
+.addcandidate{
+    background:url('img/candidate.jpg') no-repeat center center fixed;
+    background-position-x: 0;
+}
+
+.addcandidate-form{
+    display: block;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+    float: right;
+    border-radius: 10px;
+    border: 5px solid blue;
+    box-shadow: 10px 5px 10px 5px #aaaaaa;
+    position: fixed;
+    transform: translate(250%,35%);
+}
+.addcandidate h1{
+    color:crimson;
+}
+
+.addcandidate-img{
+    margin: 5px;
+    width: 60%;
+    background-color: rgb(247, 224, 224);
+    border-radius: 2px;
+}
+.addcandidate-button{
+    margin: 5px;
+    background-color: blue;
+    font-weight: bold;
+    color: white;
+}
+.addcandidate-input{
+    border-radius: 2px;
+    padding: 5px;
+    margin: 10px;
+    background: rgb(247, 224, 224);
+    color:rgb(0, 0, 0)
+
+}
+
+
+
+.adminReg{
+    background:url('img/developer.jpg') no-repeat center center fixed;
+    background-position-x: 0;
+}
+
+.adminReg-form{
+    display: block;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+    float: right;
+    border-radius: 10px;
+    border: 5px solid purple;
+    box-shadow: 10px 5px 10px 5px #aaaaaa;
+    position: fixed;
+    transform: translate(250%,35%);
+}
+.add{
+    width: fit-content;
+    text-align: center;
+    color:green;
+    transform: translate(1020px,-5px);
+}
+
+.del{
+    width: fit-content;
+    text-align: center;
+    color:crimson;
+    transform: translate(450px,20px);
+}
+
+.adminReg-form h1{
+    color:purple;
+}
+
+.adminHome{
+    background:url('img/code_testing.jpg') no-repeat center center fixed
+}
+.adminHome-table table.th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.adminHome-data table,th,td{
+    border:1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.adminHome-data img{
+    width: 200px;
+    height: 150px;
+}
+
+.Profile-form{
+    display: block;
+    float: right;
+    position: fixed;
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    padding: 50px;
+    border: 3px solid;
+    border-color: yellow;
+    box-shadow: 10px 5px 10px 5px #aaaaaa;
+    border-radius: 20px;
+    transform: translate(120%,20%);
+}
+
+.profile{
+    background: url('img/HappyVoting.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.Profile-form label{
+    font-weight: bold;
+
+}
+
+.Profile-input{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px 10px;
+    background: rgba(255, 255, 255, 0.753);
+    color:rgb(27, 26, 26)
+
+}
+
+
+.register{
+    background:url('img/mobile_voting.jpg') no-repeat center center fixed;
+    background-size: 50%;
+    background-position-x: 80%;
+}
+
+
+.register-form{
+    display: block;
+    text-align: center;
+    width: max-content;
+    padding: 10px;
+    float: left;
+    border-radius: 10px;
+    border: 5px solid purple;
+    box-shadow: 10px 5px 10px 5px #aaaaaa;
+    position: fixed;
+    transform: translate(20%,50%);
+}
+.register-input{
+    border-radius: 2px;
+    padding: 5px;
+    margin: 10px;
+    background: rgb(247, 224, 224);
+    color:rgb(0, 0, 0)
+}
+
+.register-button{
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.login{
+    background: url('img/mobile_voting_2.jpg') no-repeat fixed;
+    background-position-x: 0;
+}
+
+.login-form{
+    display: block;
+    float: right;
+    position: fixed;
+    text-align: center;
+    width: 350px;
+    height: 200px;
+    padding: 50px;
+    border: 3px solid;
+    border-color: blue;
+    box-shadow: 10px 5px 10px 5px #aaaaaa;
+    border-radius: 20px;
+    transform: translate(180%, 50%);
+}
+
+.login-submit{
+    border-radius: 2px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.877);
+    background-color: lightcoral;
+    color: whitesmoke;
+    font: bold;
+}
+
+.login-input{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    background: lightblue;
+    color:rgb(27, 26, 26)
+}
+
+.forgot-pwd{
+    background: url('img/forgot_pwd.jpg') no-repeat center center fixed;
+    background-position-x: 0;
+    background-size: 50%;
+    
+}
+
+.forgot-pwd h1{
+    color:rgb(178, 34, 34);
+}
+
+.forgot-pwd-form{
+    display: block;
+    float: right;
+    position: fixed;
+    text-align: center;
+    width: 350px;
+    height: 300px;
+    padding: 50px;
+    border: 3px solid;
+    border-color: blue;
+    box-shadow: 10px 5px 10px 5px #aaaaaa;
+    border-radius: 20px;
+    transform: translate(180%, 50%);
+
+
+}
+
+
+.forgot-pwd-input{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    background: lightblue;
+    color:rgb(27, 26, 26);
+}
+
+
+.forgot-pwd-button{
+    border-radius: 2px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.877);
+    background-color: rgb(252, 252, 65);
+    color: rgb(1, 1, 209);
+    font: bold;
+}
+
+.vote-button{
+    color:black;
+}
+
+.voted-button{
+    color:red;
+    background: chartreuse;
+}
+
+.candidates{
+    padding: 5px;
+    margin: auto;
+    border-color: brown;
+}
+.candidate-card{
+    background: palegoldenrod;
+    height: 15%;
+    width: 25%;
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+    border-radius: 2px;
+    border-color: rgba(255, 6, 6, 0.877);
+}
+.party-img{
+    border-radius: 2px;
+    width: 20%;
+    height: 10%;
+}

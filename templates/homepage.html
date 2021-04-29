@@ -1,0 +1,53 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+<body class="base">
+    <div class="header">
+        <div class="logo">
+            V O T E
+        </div>
+        <ul>
+            
+            {% if user.is_authenticated %}
+            <a href='logout'><li>Logout</li></a>
+            <a href="profile"><li>Profile</li></a>
+            <a href='home'><li>Home</li></a>
+
+            {% else %}
+            <a href='/'><li>Home</li></a>
+            <a href='register'><li>Register</li></a>
+            <a href='login'><li>Login</li></a>
+            {% endif %}
+        </ul>
+    </div>
+
+{% if user.is_authenticated %}
+    <h1>
+        List of Candidates available are :
+    </h1>
+    <div class="candidates">
+    <form action="home" method="POST">
+        {% csrf_token %}
+        <ul>
+            {% for i in candidates %}
+            <div class="candidate-card">
+                <li>
+                    <h2>{{i.name}} {{i.party}} {{i.symbol}}</h2>
+                    <img class="party-img" src="{{i.img.url}}">
+                    <br/>
+                    {% if isvoted and votedto == i.name %}
+                    <button id = "{{i.name}}" name="{{i.name}}" disabled class="voted-button">✓ Voted to {{votedto}}</button>
+                    {% elif isvoted %}
+                    <button id = "{{i.name}}" name="{{i.name}}" disabled class="vote-button">Vote</button>
+                    {% else %}
+                    <button id = "{{i.name}}" name="{{i.name}}" class="vote-button">Vote</button>
+                    {% endif %}
+                </li>
+            </div>
+            {% endfor %}
+        </ul>
+    </form>
+    </div>
+{% endif %}
+</body>
+{% endblock %}

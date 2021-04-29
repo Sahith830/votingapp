@@ -1,0 +1,52 @@
+{% extends 'Base.html' %}
+{% block content %}
+<body class="profile">
+    <div class="header">
+        <div class="logo">
+            V O T E
+        </div>
+        <ul>
+            
+            {% if user.is_authenticated %}
+            <a href='logout'><li>Logout</li></a>
+            <a href="profile"><li>Profile</li></a>
+            {% if user.is_superuser %}
+            <a href='adminhome'><li>Home</li></a>
+            {% else %}
+            <a href='home'><li>Home</li></a>
+            {% endif %}
+            {% else %}
+            <a href='/'><li>Home</li></a>
+            <a href='register'><li>Register</li></a>
+            <a href='login'><li>Login</li></a>
+            {% endif %}
+        </ul>
+    </div>
+<div class="Profile-form">
+    {% if user.is_authenticated %}
+    <form action="profile" method="POST">
+        {% csrf_token %}
+        <br/>
+        <Label for="username">Username : </Label><br>
+        <input class="Profile-input"  type = "text" name="username" value="{{user.username}}" disabled="true">
+        <br/>
+        <Label>Email : </Label><br>
+        <input type = "text" class="Profile-input" name="email" value="{{user.email}}" disabled="true">
+        <br/>
+        <label for="oldpassword">Enter your old password :</label>
+        <br>
+        <input type = "password" class="Profile-input" name="oldpassword" value="" placeholder="Enter your old password">
+        <br/>
+        <label for="newpassword">Enter your new password :</label><br>
+        <input type = "password" class="Profile-input" name="newpassword" value="" placeholder="Enter your new password">
+        <br/>
+        <input class="profile-submit" type = "submit">
+    </form>
+</div>
+{% for i in messages %}
+{{i}}
+
+{% endfor %}
+{% endif %}
+</body>
+{% endblock %}

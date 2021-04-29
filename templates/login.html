@@ -1,0 +1,48 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+<body class="login">
+    <div class="header">
+        <div class="logo">
+            V O T E
+        </div>
+        <ul>
+            {% if user.is_authenticated %}
+            <a href='home'><li>Home</li></a>
+            <a href='logout'><li>Logout</li></a>
+            <a href="profile"><li>Profile</li></a>
+            {% else %}
+            <a href='/'><li>Home</li></a>
+            <a href='register'><li>Register</li></a>
+            <a href='login'><li>Login</li></a>
+            {% endif %}
+        </ul>
+    </div>
+    
+{% if not user.is_authenticated %}
+<div class="login-form">
+    <form method="POST" action="login">
+        {% csrf_token %}
+        <label for="username">Username : </label>
+        <input class="login-input" type="text" name="username">
+        <br/>
+        <label for="pwd">Password : </label>
+        <input class="login-input" type="password" name="pwd">
+        <br/>
+        <a href="forgotpassword"><p>Forgot Password ?</p></a>
+        <input class="login-submit" type="submit">
+    </form>
+</div>
+<div class="success">
+{% for m in messages%}
+<h2>{{m}}</h2>
+{% endfor %}
+</div>
+{% else %}
+<h1>
+You are already Logged in
+</h1>
+{% endif %}
+</body>
+{% endblock %}
+
