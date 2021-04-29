@@ -10,9 +10,9 @@ Hello User....
 **3. MySQL Client ( pip install mysqlclient )
 4. Pillow ( pip install Pillow )**
 
-*disclaimer:
+**disclaimer:
 Please Ignore the User Interface. I'm not so good at designing the interface.
-If you didn't find any buttons or the form is visible only half the screen please reduce the zoom ratio. For better Experience set the zoom ratio to 70 - 50 %
+If you didn't find any buttons or the form is visible only half the screen please reduce the zoom ratio. For better Experience set the zoom ratio to 70 - 50 %**
 
 *The Reasons why i used Django in this Project :
 1. It is Simple and easy to use
