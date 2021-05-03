@@ -98,7 +98,8 @@ def adminHome(request):
     totalvotes = len(UserVote.objects.filter(isVoted=True))
     for i in candidates:
         t = UserVote.objects.filter(isVoted=True,votedto=i.name)
-        result.append((i.name,round((len(t)/totalvotes)*100,2),len(t)))
+        if(totalvotes):
+            result.append((i.name,round((len(t)/totalvotes)*100,2),len(t)))
     candidates = Candidates.objects.all()
     return render(request,'adminHome.html',{'result':result,'candidates':candidates,'total':totalvotes})
 
